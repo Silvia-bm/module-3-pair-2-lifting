@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Preview from "./Preview";
 import PropTypes from "prop-types";
+import InputGroupText from "./InputGroupText";
 
 const App = () => {
   // Estados del componente
@@ -79,21 +80,9 @@ const App = () => {
         <h2>Rellena tus datos para finalizar la compra:</h2>
         <div className="form">
           {/* name */}
-          <div className="input-group-text">
-            <label className="label-text" htmlFor="name">
-              Escribe un nombre:
-            </label>
-            <input
-              className="input-text"
-              type="text"
-              name="name"
-              id="name"
-              placeholder="María García"
-              value={name}
-              onChange={handleName}
-            />
-          </div>
-
+          
+            <InputGroupText name={name} handleName={handleName}/>
+        
           {/* email */}
           <div className="input-group-text">
             <label className="label-text" htmlFor="email">
